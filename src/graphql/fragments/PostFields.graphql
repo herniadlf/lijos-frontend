@@ -1,0 +1,15 @@
+fragment PostFields on Post {
+  id
+  profile {
+    ...ProfileFields
+    __typename
+  }
+  metadata {
+    ...MetadataFields
+    __typename
+  }
+  hidden
+  createdAt
+  appId
+  __typename
+}

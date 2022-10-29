@@ -1,0 +1,17 @@
+query CommentFeed($request: PublicationsQueryRequest!) {
+  publications(request: $request) {
+    items {
+      ... on Comment {
+        ...CommentFields
+        __typename
+      }
+      __typename
+    }
+    pageInfo {
+      totalCount
+      next
+      __typename
+    }
+    __typename
+  }
+}

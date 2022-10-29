@@ -1,0 +1,17 @@
+query ProfileFeed($request: PublicationsQueryRequest!) {
+  publications(request: $request) {
+    items {
+      ... on Post {
+        ...PostFields
+        __typename
+      }
+      __typename
+    }
+    pageInfo {
+      totalCount
+      next
+      __typename
+    }
+    __typename
+  }
+}
