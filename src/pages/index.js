@@ -2,7 +2,7 @@
 import { ProfileFeedQuery } from "../graphql/queries/ProfileFeed";
 import { useQuery } from "@apollo/client";
 import Link from "next/link";
-import Error from "../../components/Error";
+import Error from "../components/Error";
 
 export default function Home() {
   const daoProfileId = "0xe228";
